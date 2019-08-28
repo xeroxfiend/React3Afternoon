@@ -5,6 +5,7 @@
 .content {
     color: #222222;
     padding: 40px;
+    width: 100vw;
 }
 
 .number {
@@ -14,7 +15,7 @@
 
 .name {
     border-bottom: 2px solid #34A5DA;
-    width: 200px;
+    width: 400px;
 }
 
 .from::before {
@@ -40,14 +41,46 @@
 }
 
 .movie1 {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .movie2 {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .movie3 {
-    margin-left: 50px;
+    margin-left: 30px;
     margin-bottom: 20px;
+    width: 540px;
+}
+
+.buttons {
+    display: flex;
+    /* width: 100vw; */
+}
+
+.previous {
+    /* width: 30px; */
+    margin-right: 150px;
+    margin-top: 80px;
+    margin-bottom: -50px;
+    border: none;
+    background: transparent;
+    color: #EBEBEB;
+    font-size: 1.2rem;
+}
+
+.next {
+    margin-left: 150px;
+    margin-top: 80px;
+    margin-bottom: -50px;
+    border: none;
+    background: transparent;
+    color: #EBEBEB;
+    font-size: 1.2rem;
+}
+
+.count {
+    margin-bottom: -100px;
+    margin-left: -50px;
 }

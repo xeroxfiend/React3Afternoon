@@ -1,68 +1,70 @@
-import React, {Component} from 'react'
-import '../Content.css'
+import React, {Component} from "react";
+import "../Content.css";
 
 class Content extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            name: '',
-            from: '',
-            job: '',
-            employer: '',
-            movie1: '',
-            movie2: '',
-            movie3: ''
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+    //   name: "",
+    //   from: "",
+    //   job: "",
+    //   employer: "",
+    //   movie1: "",
+    //   movie2: "",
+    //   movie3: "",
+      index: 0
+    };
+  }
+
+  handleClickPrevious() {
+    if (this.state.index > 0) {
+        this.setState({
+          index: this.state.index - 1
+      })
     }
+  }
 
-    render() {
-        let userArray = this.props.data
+  handleClickNext() {
+      if (this.state.index < 24)
+    this.setState({
+      index: this.state.index + 1
+    });
+  }
 
-        for (let i = 0; i < userArray.length; i++) {
-            this.setState({
-                name: userArray[i].name.first
-                // from: ,
-                // job:,
-                // employer:,
-                // movie1:,
-                // movie2:,
-                // movie3:
-            })
-        }
+  render() {
+    let userArray = this.props.data;
+    // console.log(userArray);
 
-        // let mapped = userArray.map((el, i) => {
-        //     for (i; i < userArray.length; i++) {
-        //         let mapped
-        //     }
-        // })
-        
-        // let name = userArray[0].name.first
-
-        // console.log(userArray)
-
-        return (
-            <div className="content">
-                <div className="number">
-                <h1 className="count">1/25</h1>
-                </div>
-                <h1 className='name'>{this.state.name}</h1>
-                <div className="user-info">
-                    <p className='from'>{this.state.from}</p>
-                    <p className='job'>{this.state.job}</p>
-                    <p className='employer'>{this.state.employer}</p>
-                </div>
-                <div className="movies">
-
-                <h3 className='movie-header'>Favorite Movies:</h3>
-                    <p className='movie1'>1. {this.state.movie1}</p>
-                    <p className='movie2'>2. {this.state.movie2}</p>
-                    <p className='movie3'>3. {this.state.movie3}</p>
-                </div>
-
-
-            </div>
-        )
-    }
+    return (
+      <div className="content">
+        <div className="number">
+          <h1 className="count">{`${this.state.index + 1}/${userArray.length}`}</h1>
+        </div>
+        <h1 className="name">{`${userArray[this.state.index].name.first} ${userArray[this.state.index].name.last}`}</h1>
+        <div className="user-info">
+          <p className="from">{userArray[this.state.index].city}</p>
+          <p className="job">{userArray[this.state.index].title}</p>
+          <p className="employer">{userArray[this.state.index].employer}</p>
+        </div>
+        <div className="movies">
+          <h3 className="movie-header">Favorite Movies:</h3>
+          <p className="movie1">
+            1. {userArray[this.state.index].favoriteMovies[0]}
+          </p>
+          <p className="movie2">
+            2. {userArray[this.state.index].favoriteMovies[1]}
+          </p>
+          <p className="movie3">
+            3. {userArray[this.state.index].favoriteMovies[2]}
+          </p>
+        </div>
+        <div className="buttons">
+          <button onClick={() => this.handleClickPrevious()} className='previous' >{'<'} Previous</button>
+          <button onClick={() => this.handleClickNext()} className='next' >Next {'>'}</button>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Content
+export default Content;

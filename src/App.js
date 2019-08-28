@@ -10,10 +10,7 @@ function App() {
       </header>
       <div className="body">
         <Main />
-        <div className="buttons">
-          <button className='previous' >{'<'} Previous</button>
-          <button className='next' >Next {'>'}</button>
-        </div>
+        
       </div>
     </div>
   );
