@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    color: #222222;
+    padding: 40px;
+}
+
+.number {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name {
+    border-bottom: 2px solid #34A5DA;
+    width: 200px;
+}
+
+.from::before {
+    content: 'From: ';
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.job::before {
+    content: 'Job Title: ';
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.employer::before {
+    content: 'Employer: ';
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.movie-header {
+    margin-top: 50px;
+}
+
+.movie1 {
+    margin-left: 50px;
+}
+
+.movie2 {
+    margin-left: 50px;
+}
+
+.movie3 {
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
