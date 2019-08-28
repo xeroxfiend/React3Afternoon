@@ -8,11 +8,6 @@
     width: 100vw;
 }
 
-.number {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .name {
     border-bottom: 2px solid #34A5DA;
     width: 400px;
@@ -80,7 +75,12 @@
     font-size: 1.2rem;
 }
 
+.number {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .count {
     margin-bottom: -100px;
-    margin-left: -50px;
+    margin-left: -500px;
 }
