@@ -42,7 +42,7 @@ class Content extends Component {
         </div>
         <h1 className="name">{`${userArray[this.state.index].name.first} ${userArray[this.state.index].name.last}`}</h1>
         <div className="user-info">
-          <p className="from">{userArray[this.state.index].city}</p>
+          <p className="from">{`${userArray[this.state.index].city}, ${userArray[this.state.index].country}`} </p>
           <p className="job">{userArray[this.state.index].title}</p>
           <p className="employer">{userArray[this.state.index].employer}</p>
         </div>
