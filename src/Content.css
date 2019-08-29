@@ -61,9 +61,10 @@
     margin-top: 80px;
     margin-bottom: -50px;
     border: none;
-    background: transparent;
+    background: #222222;
     color: #EBEBEB;
     font-size: 1.2rem;
+    z-index: 1;
 }
 
 .next {
@@ -71,9 +72,10 @@
     margin-top: 80px;
     margin-bottom: -50px;
     border: none;
-    background: transparent;
+    background: #222222;
     color: #EBEBEB;
     font-size: 1.2rem;
+    z-index: 1;
 }
 
 .number {
